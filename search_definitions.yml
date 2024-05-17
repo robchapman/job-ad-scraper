@@ -1,0 +1,15 @@
+job_boards:
+  - name: 'LinkedIn'
+    url: 'https://www.linkedin.com/search/results/people/?keywords={{query}}'
+    parse_rules:
+      - name: 'list'
+        selector: 'test'
+      - name: 'page_navigation'
+        selector: 'test'
+      - name: 'job_ad'
+        selector: 'test'
+    searches:
+      - name: 'search'
+        query_params: 'test'
+          
+  
