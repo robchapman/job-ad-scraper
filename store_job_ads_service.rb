@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'google_drive'
+require_relative 'base_service'
 
 class StoreJobAdsService < BaseService
   def initialize(job_ads)
@@ -10,10 +11,6 @@ class StoreJobAdsService < BaseService
 
   def call
     puts job_ads
-    # Read existing job postings from google sheet
-
-    # Compare the new job postings with the existing job postings
-
     # Add new job postings to the google sheet
   end
 end

@@ -1,15 +1,34 @@
+
 job_boards:
   - name: 'LinkedIn'
     url: 'https://www.linkedin.com/search/results/people/?keywords={{query}}'
+    paramater_separator: '&'
     parse_rules:
       - name: 'list'
         selector: 'test'
-      - name: 'page_navigation'
+      - name: 'results_count'
         selector: 'test'
       - name: 'job_ad'
         selector: 'test'
+        filters:
+          - type: 'must_contain'
+            value: 'ruby'
     searches:
-      - name: 'search'
-        query_params: 'test'
-          
-  
+      - name: 'Full Stack Developer - In London - Full/Contract - past day'
+        query_params:
+          f_JT: 'F%2CC' # Full-time, Contract
+          f_PP: '100495523' # In London
+          f_TPR: 'd86400' # Past day
+          f_WT: '3%2C1' # Onsite, Hybrid
+          keywords: full%20stack%20developer # Full Stack Developer
+          refresh: 'true' # Refresh the search?
+          start: 0 # Start at the first page
+      - name: 'Back End Developer - In London - Full/Contract - past day'
+        query_params:
+          f_JT: 'F%2CC' # Full-time, Contract
+          f_PP: '100495523' # In London
+          f_TPR: 'd86400' # Past day
+          f_WT: '3%2C1' # Onsite, Hybrid
+          keywords: full%20stack%20developer # Full Stack Developer
+          refresh: 'true' # Refresh the search?
+          start: 0 # Start at the first page

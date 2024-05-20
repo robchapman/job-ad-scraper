@@ -2,9 +2,10 @@
 
 source 'https://rubygems.org'
 
+gem 'capybara'
 gem 'google_drive'
-gem 'httparty'
 gem 'nokogiri'
-gem 'rubocop'
 gem 'rspec'
+gem 'rubocop'
 gem 'rubocop-rspec'
+gem 'selenium-webdriver'
