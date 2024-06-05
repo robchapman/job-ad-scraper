@@ -12,13 +12,11 @@ existing_job_ads = YAML.load_file('job_ads.yml')
 
 puts 'Scraping job ads...'
 job_ads = []
-search_definitions[:job_boards].each do |job_board|
+search_definitions[:job_boards].each do |search_definition_data|
   job_board[:searches].each do |search|
     puts "Scraping #{job_board[:name]} for #{search[:title]} jobs..."
     job_ads << LinkedInScraperService.new(
-      job_board[:url],
-      job_board[:parse_rules],
-      search[:query_params],
+      search_definition_data,
       existing_job_ads
     ).call
   end

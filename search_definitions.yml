@@ -1,6 +1,7 @@
 
 job_boards:
   - name: 'LinkedIn'
+    login_url: 'https://www.linkedin.com'
     url: 'https://www.linkedin.com/search/results/people/?keywords={{query}}'
     paramater_separator: '&'
     parse_rules:

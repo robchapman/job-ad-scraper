@@ -2,15 +2,12 @@
 
 require_relative '../base_service'
 
-class StoreJobAdsService < BaseService
-  def initialize(url, parse_rules, query_params, existing_job_ads)
-    super
-    @url = url
-    @parse_rules = parse_rules
-    @query_params = query_params
-  end
+class BaseJobBoardScraperService < BaseService
+  attr_reader :search_definition_data, :existing_job_ads
 
-  def call
-    raise NotImplementedError
+  def initialize(search_definition_data, existing_job_ads)
+    super
+    @search_definition_data = search_definition_data
+    @existing_job_ads = existing_job_ads
   end
 end
