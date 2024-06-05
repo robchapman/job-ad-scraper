@@ -2,7 +2,7 @@
 
 class BaseService
   def self.call(*)
-    new.call(*)
+    new(*).call
   end
 
   def initialize(*_args) end
