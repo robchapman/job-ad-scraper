@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'capybara'
+gem 'dotenv'
 gem 'google_drive'
 gem 'nokogiri'
 gem 'rspec'

@@ -16,6 +16,7 @@ GEM
       xpath (~> 3.2)
     declarative (0.0.20)
     diff-lcs (1.5.1)
+    dotenv (3.1.2)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -172,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  dotenv
   google_drive
   nokogiri
   rspec
