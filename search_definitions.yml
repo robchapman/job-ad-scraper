@@ -2,34 +2,61 @@
 job_boards:
   - name: 'LinkedIn'
     login_url: 'https://www.linkedin.com'
-    url: 'https://www.linkedin.com/search/results/people/?keywords={{query}}'
-    paramater_separator: '&'
-    parse_rules:
-      - name: 'list'
-        selector: 'test'
-      - name: 'results_count'
-        selector: 'test'
-      - name: 'job_ad'
-        selector: 'test'
-        filters:
-          - type: 'must_contain'
-            value: 'ruby'
+    url: 'https://www.linkedin.com/jobs/search/?'
+    filters:
+      - type: 'must_contain'
+        value: 'ruby'
     searches:
-      - name: 'Full Stack Developer - In London - Full/Contract - past day'
+      - name: 'Full Stack Developer-In London-past day'
         query_params:
-          f_JT: 'F%2CC' # Full-time, Contract
           f_PP: '100495523' # In London
-          f_TPR: 'd86400' # Past day
+          f_TPR: 'r86400' # Past day
           f_WT: '3%2C1' # Onsite, Hybrid
           keywords: full%20stack%20developer # Full Stack Developer
           refresh: 'true' # Refresh the search?
           start: 0 # Start at the first page
-      - name: 'Back End Developer - In London - Full/Contract - past day'
+      - name: 'Back End Developer-In London-past day'
         query_params:
-          f_JT: 'F%2CC' # Full-time, Contract
           f_PP: '100495523' # In London
-          f_TPR: 'd86400' # Past day
+          f_TPR: 'r86400' # Past day
           f_WT: '3%2C1' # Onsite, Hybrid
+          keywords: back%20end%20developer # Back End Developer
+          refresh: 'true' # Refresh the search?
+          start: 0 # Start at the first page
+      - name: 'ruby on rails-In London-past day'
+        query_params:
+          f_PP: '100495523' # In London
+          f_TPR: 'r86400' # Past day
+          f_WT: '3%2C1' # Onsite, Hybrid
+          keywords: ruby%20on%20rails # Ruby on Rails
+          refresh: 'true' # Refresh the search?
+          start: 0 # Start at the first page
+      - name: Full Stack Developer-UK Remote-past day
+        query_params:
+          f_PP: 'GB%3A0' # UK Remote
+          f_TPR: 'r86400' # Past day
+          f_WT: '2' # Remote
+          geoId: '101165590' # UK
           keywords: full%20stack%20developer # Full Stack Developer
+          location: 'United%20Kingdom' # UK
+          refresh: 'true' # Refresh the search?
+          start: 0 # Start at the first page
+      - name: Back End Developer-UK Remote-past day
+        query_params:
+          f_PP: 'GB%3A0' # UK Remote
+          f_TPR: 'r86400' # Past day
+          f_WT: '2' # Remote
+          geoId: '101165590' # UK
+          keywords: back%20end%20developer # Back End Developer
+          location: 'United%20Kingdom' # UK
+          refresh: 'true' # Refresh the search?
+          start: 0 # Start at the first page
+      - name: ruby on rails-UK Remote-past day
+        query_params:
+          f_TPR: 'r86400' # Past day
+          f_WT: '2' # Remote
+          geoId: '101165590' # UK
+          keywords: ruby%20on%20rails # Ruby on Rails
+          location: 'United%20Kingdom' # UK
           refresh: 'true' # Refresh the search?
           start: 0 # Start at the first page

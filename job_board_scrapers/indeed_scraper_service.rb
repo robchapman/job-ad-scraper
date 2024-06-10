@@ -1,4 +1,6 @@
 # frozen_string_literal: true
 
-class IndeedScraperService < JobBoardScraperService
+require_relative 'base_job_board_scraper_service'
+
+class IndeedScraperService < BaseJobBoardScraperService
 end
